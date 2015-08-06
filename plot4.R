@@ -15,8 +15,8 @@ with(datifiltrati3,plot(x = datifiltrati3,type = "l", ylab="Voltage", xlab="date
 with(datifiltrati2,plot(x = datifiltrati2$Date,y=datifiltrati2$Sub_metering_1,type = "l", col="black", ylab="Energy sub metering", xlab=""))
 lines(x = datifiltrati2$Date,y=datifiltrati2$Sub_metering_2,col="red")
 lines(x = datifiltrati2$Date,y=datifiltrati2$Sub_metering_3,col="blue")
-temp<-legend("topright", legend=c(" "," "," "),lwd = 1,bty = "n", col=c("black","red","blue"),cex=1,xjust = 1,yjust = 1,text.width = strwidth(names(datifiltrati2)[2]))
-text(temp$rect$left + temp$rect$w, temp$text$y,c(names(datifiltrati2)[2],names(datifiltrati2)[3],names(datifiltrati2)[4]), pos = 2,cex=1)
+temp<-legend("topright", legend=c(" "," "," "),lwd = 1,bty = "n", col=c("black","red","blue"),pt.cex=1,cex=0.8,xjust = 1,yjust = 1,text.width = strwidth(names(datifiltrati2)[2]))
+text(temp$rect$left + temp$rect$w, temp$text$y,c(names(datifiltrati2)[2],names(datifiltrati2)[3],names(datifiltrati2)[4]), pos = 2,cex=0.8)
 with(datifiltrati4,plot(x = datifiltrati4,type = "l", xlab="datetime"))
 #write png file
 dev.copy(png,filename = "plot4.png", width = 480, height = 480, units = "px")
