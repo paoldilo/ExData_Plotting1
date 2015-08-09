@@ -8,7 +8,7 @@ datifiltrati<- dati[dati$Date>=as.POSIXct("2007-02-01 00:00:00", format = "%Y-%m
 datifiltrati2<- dati[dati$Date>=as.POSIXct("2007-02-01 00:00:00", format = "%Y-%m-%d %H:%M:%S") & dati$Date<=as.POSIXct("2007-02-03 00:00:00", format = "%Y-%m-%d %H:%M:%S"),c(1,7,8,9)]
 datifiltrati3<- dati[dati$Date>=as.POSIXct("2007-02-01 00:00:00", format = "%Y-%m-%d %H:%M:%S") & dati$Date<=as.POSIXct("2007-02-03 00:00:00", format = "%Y-%m-%d %H:%M:%S"),c(1,5)]
 datifiltrati4<- dati[dati$Date>=as.POSIXct("2007-02-01 00:00:00", format = "%Y-%m-%d %H:%M:%S") & dati$Date<=as.POSIXct("2007-02-03 00:00:00", format = "%Y-%m-%d %H:%M:%S"),c(1,4)]
-#draw plot
+#draw plot and save png
 png(filename = "plot4.png", width = 480, height = 480, units = "px")
 par(mfrow=c(2,2))
 with(datifiltrati,plot(x = datifiltrati,type = "l", ylab="Global Active Power", xlab=""))

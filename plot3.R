@@ -5,7 +5,7 @@ dati$Date=paste(dati$Date,dati$Time)
 dati[,1]=as.POSIXct(dati[,1], format = "%d/%m/%Y %H:%M:%S")
 # filter only dates of 01-02/02/2007
 datifiltrati<- dati[dati$Date>=as.POSIXct("2007-02-01 00:00:00", format = "%Y-%m-%d %H:%M:%S") & dati$Date<=as.POSIXct("2007-02-03 00:00:00", format = "%Y-%m-%d %H:%M:%S"),c(1,7,8,9)]
-#draw plot
+#draw plot and save png
 png(filename = "plot3.png", width = 480, height = 480, units = "px")
 with(datifiltrati,plot(x = datifiltrati$Date,y=datifiltrati$Sub_metering_1,type = "l", col="black", ylab="Energy sub metering", xlab=""))
 lines(x = datifiltrati$Date,y=datifiltrati$Sub_metering_2,col="red")
